@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasta Tracker</title>
+    <link rel="stylesheet" href="./scss/main.scss" />
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Fredoka:wght@300;400;500&family=Italiana&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- This is for navigation bar-->
+    <header>
+        <nav>
+            <img src="/assets/logo.png" alt="brandlogo"/>
+            <h1 id="pagetitle">PASTACIAN</h1>
+            
+            <a href="#list-page">Scroll down to your list</a>
+            <a href="#list-page" class="arrow-down"></a>
+        </nav>
+        <div class="imageContainer">
+            <a id="imageLink" href="#">
+                 <img alt="" id="unsplashImage" />
+            </a>
+            <h2>Today's Pasta</h2>
+        </div>
+    </header>
+    
+    <!-- This is for main section-->
+    <main>
+        <!-- Home Page -->
+        <section class="home_page">
+            <div class="container-left">
+                <h4>New Recipe</h4>
+                <form id="inputSection">
+                    <div class="date-name">
+                        <div class="form-element date-element">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" name="date" required="true">
+                        </div>
+
+                        <div class="form-element" style="margin-bottom: 0;">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required="true">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="customFileUpload">
+                            <input type="file" id="image" name="image" accept="image/*" required="true">
+                            <label class="uploadBox">
+                                <img src="/assets/camera-icon.png" alt="cameraicon"/>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-element">
+                        <label for="pastaSauce">Type of Sauce</label>
+                        <div class="radioGroup">
+                            <input type="radio" id="tomato" name="sauce" value="Tomato-based">
+                            <label for="tomato">Tomato-based</label>
+                            <input type="radio" id="cream" name="sauce" value="Cream-based">
+                            <label for="cream">Cream-based</label>
+                            <input type="radio" id="oil" name="sauce" value="Oil-based">
+                            <label for="oil">Oil-based</label>
+                            <input type="radio" id="others" name="sauce" value="Others">
+                            <label for="others">Others</label>
+                        </div>
+                    </div>
+
+                    <div class="form-element">
+                        <label for="pastaType">Type of Pasta</label>
+                        <select id="pastaType" name="pastaType" required>
+                            <option value="" disabled selected>Select one from below</option>
+                            <option value="Spaghetti">Spaghetti</option>
+                            <option value="Penne">Penne</option>
+                            <option value="Fettuccine">Fettucine</option>
+                            <option value="Ravioli">Linguine</option>
+                            <option value="Others">Rigatoni</option>
+                            <option value="Others">Lasagne</option>
+                            <option value="Others">Gnocchi</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-element">
+                        <label for="notes">Notes</label>
+                        <textarea id="notes" name="notes" placeholder="Ingredients, recipe, etc."></textarea>
+                    </div>
+                    
+                    <div class="button-group">
+                        <button type="button" id="resetBtn" name="resetBtn" value="resetBtn">Reset</button>
+                        <button type="submit" id="addBtn" name="addBtn" value="addBtn">Add to my list</button>
+                    </div>
+                </form>
+            </div>
+            <div class="container-right">
+                <div id="recipeCount"></div>
+                <div class="box">
+                    <h5>Bits of Knowledge</h5>
+                    <p style="margin: 5px 0">Let's learn a little about pasta!</p>
+                    <div class="small-box">
+                        <img src="/assets/dictionary.png" alt="dictionary">
+                        <div class="external-links">
+                            <p>Pasta Shape Dictionary</p>
+                            <p><a href="https://sharethepasta.org/pasta-shapes/" target="_blank">read more ></a></p>
+                        </div>
+                    </div>
+                    <div class="small-box">
+                        <img src="/assets/history.png" alt="history">
+                        <div class="external-links">
+                            <p>History of Pasta</p>
+                            <p><a href="https://sharethepasta.org/pasta-101/pasta-iq/history-of-pasta/" target="_blank">read more ></a></p>
+                        </div>
+                    </div>
+                    <div class="small-box">
+                        <img src="/assets/recipe.png" alt="recipe">
+                        <div class="external-links">
+                            <p>Easy Pasta Recipes</p>
+                            <p><a href="https://www.budgetbytes.com/category/recipes/pasta/" target="_blank">read more ></a></p>
+                        </div>
+                    </div>
+                    <div class="small-box">
+                        <img src="/assets/nutrition.png" alt="nutrition">
+                        <div class="external-links">
+                            <p>Nutrition Facts</p>
+                            <p><a href="https://www.realsimple.com/food-recipes/recipe-collections-favorites/popular-ingredients/pasta-nutrition-facts" target="_blank">read more ></a></p>
+                        </div>
+                    </div>
+                    <div class="small-box">
+                        <img src="/assets/homemade.png" alt="homemade">
+                        <div class="external-links">
+                            <p>Homemade Pasta?</p>
+                            <p><a href="https://www.jamieoliver.com/recipes/pasta-recipes/a-basic-recipe-for-fresh-egg-pasta/" target="_blank">read more ></a></p>
+                        </div>
+                    </div>
+                    <div class="small-box">
+                        <img src="/assets/pasta.png" alt="pasta">
+                        <div class="external-links">
+                            <p>Fun Facts about Pasta</p>
+                            <p><a href="https://www.essentialitaly.co.uk/blog/20-fun-pasta-facts" target="_blank">read more ></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- List Page -->
+        <section class="list-page" id="list-page">
+            <h3>Your Pasta List</h3>
+            <ul class="item-list" id="itemList"></ul>
+        </section>
+        
+        <!-- Popup on List Page -->
+        <div id="overlay"></div>
+        <section id="popupContainer"></section>
+    </main>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
